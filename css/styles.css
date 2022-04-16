@@ -58,6 +58,7 @@ img {
 
 .text-container ol li:first-of-type h1 {
   font-weight: 300;
+  color: #ce9797;
 }
 
 .text-container ol li h1 {
@@ -71,6 +72,7 @@ img {
 .text-container p {
   padding: 30px;
   line-height: 25px;
+  color: #ce9797;
 }
 
 .info-container {
@@ -87,7 +89,7 @@ img {
   position: relative;
 }
 
-.info-container .email-container input {
+.info-container .email-container #email {
   width: 100%;
   height: 50px;
   font-family: inherit;
@@ -100,12 +102,45 @@ img {
   background-clip: content-box, border-box;
 }
 
+.info-container .email-container input:focus {
+  outline: none;
+  border-color: #f96262;
+}
+
 .info-container .email-container button {
   position: absolute;
   right: 0px;
+  bottom: auto;
   width: 20%;
   height: 50px;
   border: none;
   border-radius: 50px;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+.info-container .email-container button:hover {
+  cursor: pointer;
+}
+
+.info-container .email-container .err-container {
+  position: relative;
+  width: 80%;
+  bottom: 37px;
+}
+
+.info-container .email-container .err-container #error {
+  position: absolute;
+  right: 10px;
+  display: none;
+}
+
+.invalid-container {
+  position: relative;
+  left: 10%;
+}
+
+.invalid-container #invalid {
+  position: absolute;
+  color: #f96262;
+  display: none;
 }

@@ -25,6 +25,7 @@ img {
     li:first-of-type {
       h1 {
         font-weight: 300;
+        color: $desaturated-red;
       }
     }
     li {
@@ -41,6 +42,7 @@ img {
   p {
     padding: 30px;
     line-height: 25px;
+    color: $desaturated-red;
   }
 }
 
@@ -52,7 +54,7 @@ img {
     width: 85%;
     position: relative;
 
-    input {
+    #email {
       width: 100%;
       height: 50px;
       font-family: inherit;
@@ -68,19 +70,53 @@ img {
       background-clip: content-box, border-box;
     }
 
+    input:focus {
+      outline: none;
+      border-color: $soft-red;
+    }
+
     button {
       position: absolute;
       right: 0px;
+      bottom: auto;
 
       width: 20%;
       height: 50px;
       border: none;
       border-radius: 50px;
+
       background-image: linear-gradient(
         135deg,
         hsl(0, 80%, 86%),
         hsl(0, 74%, 74%)
       );
     }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .err-container {
+      position: relative;
+      width: 80%;
+      bottom: 37px;
+
+      #error {
+        position: absolute;
+        right: 10px;
+        display: none;
+      }
+    }
+  }
+}
+
+.invalid-container {
+  position: relative;
+  left: 10%;
+
+  #invalid {
+    position: absolute;
+    color: $soft-red;
+    display: none;
   }
 }
